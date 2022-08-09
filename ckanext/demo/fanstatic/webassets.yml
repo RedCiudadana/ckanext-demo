@@ -1,0 +1,5 @@
+example_theme:
+  output: demo-lib/%(version)s_theme.css
+  filters: cssrewrite
+  contents:
+    - example_theme.css
