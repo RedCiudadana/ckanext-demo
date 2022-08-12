@@ -37,6 +37,11 @@ body {
   background-color: #fff;
 }
 
+main,
+.main {
+  background: #fff;
+}
+
 /* account masthead */
 .account-masthead {
   background: #6cc6c7;
@@ -81,6 +86,8 @@ body {
 .hero {
   background: url("/banner-background.png");
   color: white;
+  display: flex;
+  align-items: center;
 }
 
 .hero-content {
@@ -100,4 +107,37 @@ body {
   color: white;
   border: none;
   box-shadow: none;
+}
+
+/* footer */
+.site-footer {
+  background: #494949;
+  color: white;
+}
+
+.site-footer a,
+.site-footer label {
+  color: white;
+}
+
+.footer-logo {
+  width: 60%;
+  height: auto;
+  margin-bottom: 16px;
+}
+
+.footer-credits {
+  display: flex;
+  align-items: center;
+}
+
+.footer-credits img {
+  height: 45px;
+  width: auto;
+  margin-right: 12px;
+}
+
+.footer-credits p {
+  margin-top: 6px;
+  margin-bottom: 0;
 }

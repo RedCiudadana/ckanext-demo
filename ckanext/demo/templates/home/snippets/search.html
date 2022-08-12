@@ -26,10 +26,7 @@ placeholder = _('E.g. environment') %}
   </form>
   <div class="tags">
     <h3>{{ _('Popular tags') }}</h3>
-    <a class="tag" href="/">Tag 1</a>
-    <a class="tag" href="/">Tag 1</a>
-    <a class="tag" href="/">Tag 1</a>
-    <a class="tag" href="/">Tag 1</a>
+
     {% for tag in tags %}
     <a class="tag" href="{% url_for 'dataset.search', tags=tag.name %}"
       >{{ h.truncate(tag.display_name, 22) }}</a
