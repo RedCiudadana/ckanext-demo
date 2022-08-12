@@ -122,6 +122,7 @@ main,
 
 .footer-logo {
   width: 60%;
+  max-width: 130px;
   height: auto;
   margin-bottom: 16px;
 }
