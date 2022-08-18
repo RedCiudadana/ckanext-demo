@@ -33,7 +33,7 @@ body {
   font-family: "Muller", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333333;
+  color: #494949;
   background-color: #fff;
 }
 
@@ -58,7 +58,7 @@ main,
 .account-masthead .account ul li a:hover,
 .account-masthead .account .notifications a span.badge {
   background: #c0e7e7;
-  color: black;
+  color: #494949;
 }
 
 /* masthead */
@@ -74,6 +74,7 @@ main,
 .masthead .nav > .active > a:hover,
 .masthead .nav > .active > a:focus {
   color: #4a4949;
+  font-weight: 100;
 }
 
 .masthead .navigation .nav-pills li a:hover,
@@ -88,6 +89,8 @@ main,
   color: white;
   display: flex;
   align-items: center;
+  max-width: 2000px;
+  margin: 0 auto;
 }
 
 .hero-content {
@@ -107,6 +110,34 @@ main,
   color: white;
   border: none;
   box-shadow: none;
+}
+
+/*
+functions section
+*/
+.functions-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.functions-container .function {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 300px;
+}
+
+.functions-container .function img {
+  width: auto;
+  height: 80px;
+}
+
+.functions-container .function p {
+  font-weight: 100;
 }
 
 /* footer */
