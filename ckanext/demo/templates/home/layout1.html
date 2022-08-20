@@ -13,7 +13,10 @@
   </div>
   <div style="display: none">{{ h.demo_groups() }}</div>
 
-  <section aria-labelledby="functions-section-title" class="container">
+  <section
+    aria-labelledby="functions-section-title"
+    class="container functions-section"
+  >
     <h1 id="functions-section-title">{% trans %}Functions{% endtrans %}</h1>
     <div class="functions-container">
       <div class="function">
@@ -43,11 +46,47 @@
     </div>
   </section>
 
-  <section aria-labelledby="data-categories-title" class="container">
+  <section
+    aria-labelledby="data-categories-title"
+    class="container data-categories-section"
+  >
     <h1 id="data-categories-title">{% trans %}Data categories{% endtrans %}</h1>
-    {% for group in h.demo_groups() %}
-    <div>Group {{ group }}</div>
-    {% endfor %}
+    <!--{'approval_status': 'approved',
+       'created': '2022-08-09T12:15:05.066269',
+       'description': '',
+       'display_name': 'Grupo',
+       'id': 'd67cd106-90b6-4bec-b351-0ff11cb198ba',
+       'image_display_url': '',
+       'image_url': '',
+       'is_organization': False,
+       'name': 'grupo',
+       'num_followers': 0,
+       'package_count': 0,
+       'state': 'active',
+       'title': 'Grupo',
+       'type': 'group'}-->
+    <div class="data-categories-container">
+      {% for group in h.demo_groups() %}
+      <a
+        href="{{ h.url_for('group.read', id=group.id) }}"
+        aria-labelledby="category-title-{{ group.id }}"
+        class="data-category"
+      >
+        {% if group.image_url %}
+        <img src="{{ group.image_display_url }}" />
+        {% endif %}
+        <h2 id="category-title-{{ group.id }}">{{ group.name }}</h2>
+        <p>
+          {% trans count=group.package_count %} {{ count }} dataset {% pluralize
+          %} {{ count }} datasets {% endtrans %}
+        </p>
+      </a>
+      {% endfor %}
+      <a class="all-data-link" href="/groups">
+        {% trans %}See all categories{% endtrans %}
+        <i class="fa fa-arrow-right" aria-hidden="true" role="presentation"></i>
+      </a>
+    </div>
   </section>
 
   <div class="main">
