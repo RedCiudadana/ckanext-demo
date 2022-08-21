@@ -51,20 +51,6 @@
     class="container data-categories-section"
   >
     <h1 id="data-categories-title">{% trans %}Data categories{% endtrans %}</h1>
-    <!--{'approval_status': 'approved',
-       'created': '2022-08-09T12:15:05.066269',
-       'description': '',
-       'display_name': 'Grupo',
-       'id': 'd67cd106-90b6-4bec-b351-0ff11cb198ba',
-       'image_display_url': '',
-       'image_url': '',
-       'is_organization': False,
-       'name': 'grupo',
-       'num_followers': 0,
-       'package_count': 0,
-       'state': 'active',
-       'title': 'Grupo',
-       'type': 'group'}-->
     <div class="data-categories-container">
       {% for group in h.demo_groups() %}
       <a
@@ -88,6 +74,8 @@
       </a>
     </div>
   </section>
+
+  <p style="display: none">{{ h.demo_latest_packages() }}</p>
 
   <div class="main">
     <div class="container">
