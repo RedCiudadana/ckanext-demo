@@ -3,7 +3,7 @@
     <div class="container">
       {% block footer_content %}
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-sm-6 col-md-4 col-lg-3">
           <img
             alt="{% trans %}Site logo{% endtrans %}"
             class="footer-logo"
@@ -13,7 +13,7 @@
             {% trans %}The centralized portal of government data{% endtrans %}
           </p>
         </div>
-        <div class="col-md-4 footer-links">
+        <div class="col-sm-6 col-md-4 col-lg-3 footer-links">
           {% block footer_nav %}
           <ul class="list-unstyled">
             {% block footer_links %}
@@ -42,15 +42,15 @@
           </ul>
           {% endblock %}
         </div>
-        <div class="col-md-4 attribution">
-          {% block footer_attribution %}
-          <p>
-            {% trans %}<strong>Powered by</strong>
-            <a class="hide-text ckan-footer-logo" href="http://ckan.org">CKAN</a
-            >{% endtrans %}
-          </p>
-          {% endblock %} {% block footer_lang %} {% snippet
-          "snippets/language_selector.html" %} {% endblock %}
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <ul class="list-unstyled">
+            <li><a href="/">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 attribution">
+          {% block footer_lang %} {% snippet "snippets/language_selector.html"
+          %} {% endblock %}
         </div>
       </div>
       {% endblock %}
