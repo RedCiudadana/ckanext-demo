@@ -1,13 +1,15 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
+from ckan.lib.plugins import DefaultTranslation
 
 def get_groups():
     groups = toolkit.get_action('group_list')(data_dict={ 'all_fields': True })
     return groups
 
-class DemoPlugin(plugins.SingletonPlugin):
+class DemoPlugin(plugins.SingletonPlugin, DefaultTranslation):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers)
+    plugins.implements(plugins.ITranslation)
 
     # IConfigurer
 
